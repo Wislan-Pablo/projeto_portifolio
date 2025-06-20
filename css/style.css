@@ -109,14 +109,16 @@ header li a:hover {
     text-decoration: none;
 }
 
+header #social-links {
+    display: flex;
+    align-items: center;
+}
+
 header #social-links li {
     display: inline;
     list-style-type: none;
     height: 24px;
-}
-
-header #social-links li {
-    margin-left: 8px;
+    margin-left: 12px;
     margin-right: 0;
 }
 
