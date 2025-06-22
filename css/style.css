@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 48px;
+    scroll-padding-top: 72px;
 }
 
 body {
@@ -43,7 +43,18 @@ h3 {
     font-weight: normal;
 }
 
-a {
+h4 {
+    color: #dadada;
+    text-align: center;
+    font-size: 22px;
+    word-spacing: 8px;
+    font-family: Inter, sans-serif;
+    font-weight: normal;
+}
+
+a,
+label,
+span {
     color: #dadada;
     font-family: Poppins, sans-serif;
     font-size: 16px;
@@ -70,7 +81,6 @@ a :hover {
     background-color: rgba(25, 25, 25, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-
 }
 
 header span {
@@ -143,7 +153,7 @@ header #social-links li img {
 
 #hero-section {
     height: 500px;
-    padding-top: 150px;
+    padding-top: 184px;
 }
 
 #hero-section .container {
@@ -166,6 +176,7 @@ header #social-links li img {
 }
 
 #hero-section span {
+    font-size: 32px;
     background: linear-gradient(300deg, #f12711, #f5af19);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -193,12 +204,17 @@ header #social-links li img {
 }
 
 section {
-    padding: 40px 0;
+    padding: 48px 0;
 }
 
 .title-section {
-    padding-bottom: 32px;
+    padding-bottom: 48px;
 }
+
+.title-section h2 {
+    margin-bottom: 16px;
+}
+
 
 .title-section p {
     color: #919191;
@@ -210,12 +226,9 @@ section {
 }
 
 #tech-stack {
-    display: flex;
-    align-items: center;
     width: 100%;
-    height: 550px;
+    height: 500px;
     background-color: #191919;
-    border-bottom: 1px solid #d1d1d1;
     border-top: 1px solid #d1d1d1;
 }
 
@@ -223,8 +236,9 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(4.8%, 1fr));
     column-gap: 5.2%;
-    row-gap: 28%;
-    padding: 32px 0;
+    row-gap: 22%;
+    height: 200px;
+    margin-top: 32px;
 }
 
 li {
@@ -277,8 +291,8 @@ article footer {
 
 }
 
-
-.botao-link {
+.botao-link,
+.organization-link {
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
@@ -306,4 +320,107 @@ article footer img {
 .articles article p {
     text-align: justify;
     font-size: 16px;
+}
+
+.content {
+    min-width: 600px;
+    width: 70%;
+    margin: auto auto;
+    margin-top: 16px;
+}
+
+.content-job {
+    margin-top: 32px;
+}
+
+.content-about-title {
+    margin-bottom: 32px;
+}
+
+#content-education-icon,
+#content-work-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#content-education-icon img,
+#content-work-icon img {
+    height: 32px;
+}
+
+#content-work-icon {
+    width: 40%;
+}
+
+#content-education-icon {
+    width: 28%;
+}
+
+
+.about-title {
+    color: #d1d1d1;
+    font-size: 28px;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+}
+
+.content-job-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.job-name {
+    font-size: 22px;
+}
+
+.job-time {
+    color: #919191;
+    font-size: 14px;
+    background: #363636;
+    padding: 4px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+
+}
+
+.job-data {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 16px;
+}
+
+.job-data img {
+    height: 16px;
+}
+
+.job-data a {
+    text-decoration: none;
+    cursor: default;
+}
+
+.job-data .organization-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.job-data .organization-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.job-data a span {
+    color: #919191;
+}
+
+.job-data a:not(:last-child) {
+    margin-right: 10%;
+}
+
+.job-data a:last-child {
+    position: absolute;
+    right: 0%;
 }
