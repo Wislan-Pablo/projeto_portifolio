@@ -478,61 +478,80 @@
             </div>
             <div class="content">
                 <form action="">
-                    <label for="name">Your Name</label>
-                    <br />
-                    <input id="name" type="text">
-                    <br />
-                    <label for="position-project">Your Position/Responsibility in the Project</label>
-                    <br />
-                    <input id="position-project" type="text">
-                    <br />
-                    <label for="email">Your E-mail</label>
-                    <br />
-                    <input id="email" type="email">
-                    <br />
-                    <label for="whatsaap">Your Whatsapp</label>
-                    <br />
-                    <input id="whatsapp" type="tel"><br />
+                    <div class="line">
+                        <div class="field">
+                            <label for="name">Your Name</label>
+                            <input id="name" type="text" placeholder="Insert your name here...">
+                        </div>
+                        <div class="field">
+                            <label for="position-project">Your Position/Responsibility in the Project</label>
+                            <input id="position-project" type="text" placeholder="Your responsability here...">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="field">
+                            <label for="email">Your E-mail</label>
+                            <input id="email" type="email" placeholder="your.domain@email.com">
+                        </div>
+                        <div class="field">
+                            <label for="whatsaap">Your Whatsapp</label>
+                            <input id="whatsapp" type="tel" placeholder="+00 00 0000-0000">
+                        </div>
+                    </div>
                     <label for="product-select">What kind of solution do you want to get?</label>
                     <br />
+                    <div class="solutions">
+                        <div class="checkbox">
+                            <input type="checkbox" id="LandingPage" name="LandingPage" value="LandingPage">
+                            <label for="LandingPage">Landing Page</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="VideoClassPlatform" name="VideoClassPlatform"
+                                value="VideoClassPlatform">
+                            <label for="VideoClassPlatform">Video Class Platform</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="VirtualStore" name="VirtualStore" value="VirtualStore">
+                            <label for="VirtualStore">Virtual Store</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="PersonalBlog" name="PersonalBlog" value="PersonalBlog">
+                            <label for="PersonalBlog">Personal Blog</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="RestaurantWebsite" name="RestaurantWebsite"
+                                value="RestaurantWebsite">
+                            <label for="RestaurantWebsite">Restaurant Website</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="NewsPortal" name="NewsPortal" value="NewsPortal">
+                            <label for="NewsPortal">News Portal</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="Other" name="Other" value="Other">
+                            <label for="Other">Other</label>
+                        </div>
 
-                    <input type="checkbox" id="LandingPage" name="LandingPage" value="LandingPage">
-                    <label for="LandingPage">Landing Page</label><br>
-
-                    <input type="checkbox" id="VideoClassPlatform" name="VideoClassPlatform" value="VideoClassPlatform">
-                    <label for="VideoClassPlatform">Video Class Platform</label><br>
-
-                    <input type="checkbox" id="VirtualStore" name="VirtualStore" value="VirtualStore">
-                    <label for="VirtualStore">Virtual Store</label><br>
-
-                    <input type="checkbox" id="PersonalBlog" name="PersonalBlog" value="PersonalBlog">
-                    <label for="PersonalBlog">Personal Blog</label><br>
-
-                    <input type="checkbox" id="RestaurantWebsite" name="RestaurantWebsite" value="RestaurantWebsite">
-                    <label for="RestaurantWebsite">Restaurant Website</label><br>
-
-                    <input type="checkbox" id="NewsPortal" name="NewsPortal" value="NewsPortal">
-                    <label for="NewsPortal">News Portal</label><br>
-
-                    <input type="checkbox" id="Other" name="Other" value="Other">
-                    <label for="Other">Other</label>
+                    </div>
                     <br />
                     <span>How much do you intend to invest in this project?</span>
                     <br />
-                    <input type="radio" id="capital-1" name="fav_language" value="capital-1">
-                    <label for="html">$ 500,00 to $ 750,00</label><br>
-                    <input type="radio" id="capital-1" name="fav_language" value="capital-1">
-                    <label for="html">$ 750,00 to $ 1000,00</label><br>
-                    <input type="radio" id="capital-1" name="fav_language" value="capital-1">
-                    <label for="html">$ 1.000,00 to $ 1.500,00</label><br>
-                    <input type="radio" id="capital-1" name="fav_language" value="capital-1">
-                    <label for="html">$ 1.500,00 to $ 2.000,00</label><br>
-                    <input type="radio" id="capital-1" name="fav_language" value="capital-1">
-                    <label for="html">$ 2.000,00 to $ 2.500,00</label><br>
-                    <input type="radio" id="capital-1" name="fav_language" value="capital-1">
-                    <label for="html">$ 2.500,00 to $ 3.000,00</label><br>
-                    <input type="radio" id="capital-1" name="fav_language" value="capital-1">
-                    <label for="html">Above $ 3.000,00</label><br>
+                    <div class="price-zone">
+                        <input type="radio" id="capital-1" name="fav_language" value="capital-1">
+                        <label for="html">$ 500,00 to $ 750,00</label><br>
+                        <input type="radio" id="capital-1" name="fav_language" value="capital-1">
+                        <label for="html">$ 750,00 to $ 1000,00</label><br>
+                        <input type="radio" id="capital-1" name="fav_language" value="capital-1">
+                        <label for="html">$ 1.000,00 to $ 1.500,00</label><br>
+                        <input type="radio" id="capital-1" name="fav_language" value="capital-1">
+                        <label for="html">$ 1.500,00 to $ 2.000,00</label><br>
+                        <input type="radio" id="capital-1" name="fav_language" value="capital-1">
+                        <label for="html">$ 2.000,00 to $ 2.500,00</label><br>
+                        <input type="radio" id="capital-1" name="fav_language" value="capital-1">
+                        <label for="html">$ 2.500,00 to $ 3.000,00</label><br>
+                        <input type="radio" id="capital-1" name="fav_language" value="capital-1">
+                        <label for="html">Above $ 3.000,00</label><br>
+                    </div>
                 </form>
             </div>
         </div>

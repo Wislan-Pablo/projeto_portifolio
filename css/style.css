@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 72px;
+    scroll-padding-top: 48px;
 }
 
 body {
@@ -341,14 +341,15 @@ article footer img {
 #content-work-icon {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 #content-education-icon img,
 #content-work-icon img {
     height: 32px;
+    margin-right: 16px;
 }
 
+/*
 #content-work-icon {
     width: 40%;
 }
@@ -356,7 +357,7 @@ article footer img {
 #content-education-icon {
     width: 28%;
 }
-
+*/
 
 .about-title {
     color: #d1d1d1;
@@ -423,4 +424,53 @@ article footer img {
 .job-data a:last-child {
     position: absolute;
     right: 0%;
+}
+
+.line {
+    display: flex;
+    gap: 72px;
+    margin-bottom: 32px;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+label {
+    margin-bottom: 8px;
+    word-spacing: 4px;
+}
+
+/*
+.solutions input {
+    transform: scale(1.5);
+    margin: 16px 4px 8px 0;
+}
+
+.solutions input:not(:first-child) {
+    margin-left: 16px;
+}
+*/
+.solutions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
+    margin: 16px auto;
+}
+
+.solutions input,
+.price-zone input {
+    transform: scale(1.5);
+    margin: 12px 8px;
+}
+
+.price-zone {
+    padding: 16px 0;
 }
