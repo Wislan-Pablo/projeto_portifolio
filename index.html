@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="hero-main">
+    <section class="hero-main">
         <header>
             <div class="container">
                 <span>Personal Portfolio Presentation</span>
@@ -31,7 +31,7 @@
                             <a href="#projects" title="Go to Projects section">Projects</a>
                         </li>
                         <li>
-                            <a href="#contact-me" class="CTA" title="Ir para a seção de notícias">Contact-me</a>
+                            <a href="#contact-me" class="CTA" title="Ir para a seção de notícias">Consultancy</a>
                         </li>
                     </ul>
                     <ul id="social-links">
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </section>
     <section id="tech-stack">
         <div class="container">
             <div class="title-section">
@@ -472,11 +472,11 @@
     </section>
     <section id="contact-me">
         <div class="container">
-            <div class="title-section">
-                <h2>Contact-me</h2>
-                <h3>Insert your details so we can conctac you</h3>
-            </div>
             <div class="content">
+                <div class="title-section">
+                    <h2>Request a Consultancy</h2>
+                    <h3>Send your contact details so we can better understand your project idea.</h3>
+                </div>
                 <form action="">
                     <div class="line">
                         <div class="field">
@@ -484,7 +484,7 @@
                             <input id="name" type="text" placeholder="Insert your name here...">
                         </div>
                         <div class="field">
-                            <label for="position-project">Your Position/Responsibility in the Project</label>
+                            <label for="position-project">Your Position in the Project</label>
                             <input id="position-project" type="text" placeholder="Your responsability here...">
                         </div>
                     </div>
@@ -531,11 +531,13 @@
                             <input type="checkbox" id="Other" name="Other" value="Other">
                             <label for="Other">Other</label>
                         </div>
-
                     </div>
                     <br />
-                    <span>How much do you intend to invest in this project?</span>
+                    <label for="about-project">Tell me a little about your project idea</label><br>
+                    <textarea name="about-project" id="about-project"
+                        placeholder="Type here a summary of your project..."></textarea>
                     <br />
+                    <label>How much do you intend to invest in this project?</label>
                     <div class="price-zone">
                         <input type="radio" id="capital-1" name="fav_language" value="capital-1">
                         <label for="html">$ 500,00 to $ 750,00</label><br>
@@ -552,10 +554,48 @@
                         <input type="radio" id="capital-1" name="fav_language" value="capital-1">
                         <label for="html">Above $ 3.000,00</label><br>
                     </div>
+                    <div class="content-submit">
+                        <button type="submit" action="#" method="post" class="form-submit">SEND DATA</button>
+                        <button type="reset" class="form-clear">CLEAR DATA</button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <div class="content-title-social-links">
+                <h2>Connect with me</h2>
+                <p>You can probably find me online at one of these channels. Welcome!</p>
+            </div>
+            <div class="content-social-links">
+                <a href="#" class="botao-link" title="Leia a notícia completa">
+                    <img src="./imagens/icons/git_vector.svg" alt="logo-git" title="Ver site do projeto"><span>View
+                        Code</span>
+                </a>
+                <a href="#" class="botao-link" title="Leia a notícia completa">
+                    <img src="./imagens/icons/git_vector.svg" alt="logo-git" title="Ver site do projeto"><span>View
+                        Code</span>
+                </a>
+                <a href="#" class="botao-link" title="Leia a notícia completa">
+                    <img src="./imagens/icons/git_vector.svg" alt="logo-git" title="Ver site do projeto"><span>View
+                        Code</span>
+                </a>
+                <a href="#" class="botao-link" title="Leia a notícia completa">
+                    <img src="./imagens/icons/git_vector.svg" alt="logo-git" title="Ver site do projeto"><span>View
+                        Code</span>
+                </a>
+                <a href="#" class="botao-link" title="Leia a notícia completa">
+                    <img src="./imagens/icons/git_vector.svg" alt="logo-git" title="Ver site do projeto"><span>View
+                        Code</span>
+                </a>
+                <a href="#" class="botao-link" title="Leia a notícia completa">
+                    <img src="./imagens/icons/git_vector.svg" alt="logo-git" title="Ver site do projeto"><span>View
+                        Code</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
