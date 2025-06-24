@@ -109,7 +109,7 @@ header li a {
 }
 
 header li a:hover {
-    color: #f5f5f5;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -306,6 +306,7 @@ article footer img {
 }
 
 .articles article a:hover {
+    color: #fff;
     text-decoration: underline;
     border: none;
 }
