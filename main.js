@@ -43,6 +43,7 @@ $(window).on('scroll', function () {
 
     if (alturaScroller >= $('#contact-me').offset().top + 440) {
         $('.menu-about-me').removeClass('menu-about-me-hover');
+        $('.menu-projects').removeClass('menu-projects-hover');
         $('.menu-contact-me').addClass('menu-contact-me-hover');
     }
     /*

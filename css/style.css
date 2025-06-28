@@ -96,11 +96,23 @@ header nav {
     align-items: center;
 }
 
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
 header .menu li {
     display: inline;
     font-family: Arial, Helvetica, sans-serif;
-    margin-right: 24px;
     list-style-type: none;
+}
+
+header .menu li:not(:last-child) {
+    margin-right: 24px;
+}
+
+.li-CTA {
+    margin-right: none;
 }
 
 header li a {
@@ -111,12 +123,10 @@ header li a {
 .menu-start-hover,
 .menu-tech-stack-hover,
 .menu-projects-hover,
-.menu-about-me-hover,
-.menu-contact-me-hover {
+.menu-about-me-hover {
     color: white;
     font-weight: bold;
 }
-
 
 .CTA {
     background: #919191;
@@ -162,7 +172,7 @@ header #social-links li img {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 16px;
-    padding: 32px;
+    padding: 48px;
     border: 1px solid #d1d1d1;
 }
 
@@ -175,19 +185,17 @@ header #social-links li img {
 
 #hero-section span {
     font-size: 32px;
-    background: linear-gradient(300deg, #f12711, #f5af19);
+    background: linear-gradient(300deg, #f5af19, #f12711);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #hero-section .gradient-border {
-    background: linear-gradient(180deg, #f12711, #f5af19);
+    background: linear-gradient(180deg, #f5af19, #f12711);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     /* gradiente da borda */
     padding: 5px;
-    /* espessura da borda */
     border-radius: 50%;
-    /* forma circular */
     display: inline-block;
     margin-left: 64px;
 }
@@ -512,7 +520,10 @@ article footer img {
 
 #contact-me h3 {
     text-align: left;
-    margin: 32px 0;
+    font-size: 18px;
+    margin: 24px 0;
+    text-align: justify;
+    word-spacing: 2px;
 }
 
 #content-slide-form {
@@ -592,8 +603,9 @@ label {
     font-size: 16px;
     font-weight: 600;
     border: none;
-    margin: 16px 32px 0 0;
+    border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .form-submit:hover {
@@ -636,7 +648,22 @@ footer .container {
 
 .content-title-social-links p {
     text-align: left;
-    font-size: 20px;
+    font-size: 22px;
+    align-items: end;
+    position: relative;
+}
+
+#coffee-icon {
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 12px;
+    position: absolute;
+}
+
+.content-title-social-links p span {
+    margin-left: 38px;
+    margin-top: 4px;
+    position: absolute;
 }
 
 .content-social-links {
