@@ -8,51 +8,75 @@ $('#content-education-icon').on('click', function (e) {
     $('.slide-icon-education').toggleClass('slide-open-icon-education');
 });
 
-$('#content-slide-title').on('click', function (e) {
-    $('#content-slide-form').slideToggle();
-    $('.slide-icon-form').toggleClass('slide-open-icon-form');
+if ($('.content-form-disabled')) {
+    $('.CTA-active').removeClass('CTA-active').addClass('CTA');
+}
+
+let estaVisivel = false;
+
+$('.CTA').click(function () {
+    // Alterna visibilidade com slide
+    $('.closed-content-slide-form').slideToggle(300, function () {
+        estaVisivel = $(this).is(':visible');
+
+        // Alterna classes conforme visibilidade
+        if (estaVisivel) {
+            $('.CTA').removeClass('CTA').addClass('CTA-active');
+            $('.content-form-disabled').removeClass('content-form-disabled').addClass('content-form-enabled');
+        } else {
+            $('.CTA-active').removeClass('CTA-active').addClass('CTA');
+            $('.content-form-enabled').removeClass('content-form-enabled').addClass('content-form-disabled');
+        }
+
+        // Após o slideToggle, rolar para centralizar #contact-me na tela
+        if (estaVisivel) {
+            const offsetTop = $('#contact-me').offset().top;
+            const sectionHeight = $('#contact-me').outerHeight();
+            const windowHeight = $(window).height() + 70;
+
+            const scrollTo = offsetTop - ((windowHeight - sectionHeight) / 2);
+
+            $('html, body').animate({
+                scrollTop: scrollTo
+            }, 300); // tempo de rolagem suave
+        }
+    });
 });
 
+$('#content-slide-title').click(function () {
+    $('.closed-content-slide-form').slideToggle(300, function () {
+        estaVisivel = $(this).is(':visible'); // Verifica visibilidade após o efeito
+
+        // Atualiza o texto do botão baseado no estado
+        if (estaVisivel) {
+            $('.CTA').removeClass('CTA').addClass('CTA-active');
+            $('.content-form-disabled').removeClass('content-form-disabled').addClass('content-form-enabled');
+        } else {
+            $('.CTA-active').removeClass('CTA-active').addClass('CTA');
+            $('.content-form-enabled').removeClass('content-form-enabled').addClass('content-form-disabled');
+        }
+    })
+})
+
 $(window).on('scroll', function () {
-    const scrollTop = $(window).scrollTop();
-    const alturaJanela = $(window).height();
-    const alturaScroller = scrollTop + alturaJanela;
-
+    const centroVertical = window.scrollY + window.innerHeight / 2;
     // Remover todas as classes primeiro
-    $('.menu-tech-stack, .menu-projects, .menu-about-me, .menu-contact-me').removeClass('menu-tech-stack-hover menu-projects-hover menu-about-me-hover menu-contact-me-hover');
+    $('.menu-start, .menu-tech-stack, .menu-projects, .menu-about-me, .menu-contact-me').removeClass('menu-start-hover menu-tech-stack-hover menu-projects-hover menu-about-me-hover menu-contact-me-hover');
 
-    // Adicionar classes conforme a posição do scroll
-    if (alturaScroller <= $('#tech-stack').offset().top + 450) {
+    if (centroVertical <= $('#tech-stack').offset().top) {
         $('.menu-start').addClass('menu-start-hover');
     }
 
-    if ((alturaScroller >= $('#tech-stack').offset().top + 450) && (alturaScroller <= $('#projects').offset().top + 500)) {
-        $('.menu-start').removeClass('menu-start-hover');
+    if ((centroVertical >= $('#tech-stack').offset().top) && (centroVertical <= $('#projects').offset().top)) {
         $('.menu-tech-stack').addClass('menu-tech-stack-hover');
     }
 
-    if ((alturaScroller >= $('#projects').offset().top + 500) && (alturaScroller <= $('#about-me').offset().top + 500 <= $('#about-me').offset().top + 500)) {
-        $('.menu-tech-stack').removeClass('menu-tech-stack-hover');
+    if ((centroVertical >= $('#projects').offset().top) && (centroVertical <= $('#about-me').offset().top)) {
         $('.menu-projects').addClass('menu-projects-hover');
     }
 
-    if ((alturaScroller >= $('#about-me').offset().top + 500) && (alturaScroller <= $('#contact-me').offset().top + 500)) {
-        $('.menu-projects').removeClass('menu-projects-hover');
+    if ((centroVertical >= $('#about-me').offset().top) && (centroVertical <= $('#contact-me').offset().top)) {
         $('.menu-about-me').addClass('menu-about-me-hover');
     }
 
-    if (alturaScroller >= $('#contact-me').offset().top + 440) {
-        $('.menu-about-me').removeClass('menu-about-me-hover');
-        $('.menu-projects').removeClass('menu-projects-hover');
-        $('.menu-contact-me').addClass('menu-contact-me-hover');
-    }
-    /*
-        if (alturaScroller >= $('#contact-me').offset().top + 450) {
-            $('.menu-tech-stack').removeClass('menu-contact-me-hover');
-            $('.menu-contact-me').addClass('menu-contact-me-hover');
-        }
-    */
 });
-
-
-

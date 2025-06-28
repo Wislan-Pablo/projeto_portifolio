@@ -36,21 +36,6 @@
                                 Consultancy</a>
                         </li>
                     </ul>
-                    <!--
-                    <ul id="social-links">
-                        <li>
-                            <a href="#contact" title="Ir para GitHub"><img src="./imagens/icons/git_vector.svg"></a>
-                        </li>
-                        <li>
-                            <a href="#contact" title="Ir para Twitter"><img
-                                    src="./imagens/icons/twitter_vector.svg"></a>
-                        </li>
-                        <li>
-                            <a href="#contact" title="ir para Linkedin"><img
-                                    src="./imagens/icons/linkedin_vector.svg"></a>
-                        </li>
-                    </ul>
-                    -->
                 </nav>
             </div>
         </header>
@@ -483,45 +468,43 @@
         </div>
     </section>
     <section id="contact-me">
-        <div class="container">
-            <div class="content">
-                <div id="content-slide-title" class="title-section">
-                    <h2>Request Consultancy</h2>
-                    <img class="slide-icon-form" src="./imagens/icons/slide-toggle-closed-icon.svg" alt="">
+        <div class="content-form-disabled">
+            <div id="content-slide-title" class="title-section">
+                <h2>Request Consultancy</h2>
+                <img class="slide-icon-form" src="./imagens/icons/slide-toggle-closed-icon.svg" alt="">
+            </div>
+            <div class="closed-content-slide-form">
+                <div class="etapa" id="etapa-1">
+                    <h3>
+                        I'm glad to know that you liked the results of my work.<br />I'm sure I can help you in some
+                        way!
+                        &#128512;<br /><br /> But before we continue, can you send us your contact details so that
+                        we
+                        can better understand your project idea?
+                    </h3>
                 </div>
-                <div id="content-slide-form">
-                    <div class="etapa" id="etapa-1">
-                        <h3>
-                            I'm glad to know that you liked the results of my work.<br />I'm sure I can help you in some
-                            way!
-                            &#128512;<br /><br /> But before we continue, can you send us your contact details so that
-                            we
-                            can better understand your project idea?
-                        </h3>
+                <form action="">
+                    <div class="line">
+                        <div class="field">
+                            <label for="name">Your Name</label>
+                            <input id="name" type="text" required placeholder="Insert your name here...">
+                        </div>
+                        <div class="field">
+                            <label for="position-project">Your Position in the Project</label>
+                            <input id="position-project" type="text" required placeholder="Your responsability here...">
+                        </div>
                     </div>
-                    <form action="">
-                        <div class="line">
-                            <div class="field">
-                                <label for="name">Your Name</label>
-                                <input id="name" type="text" required placeholder="Insert your name here...">
-                            </div>
-                            <div class="field">
-                                <label for="position-project">Your Position in the Project</label>
-                                <input id="position-project" type="text" required
-                                    placeholder="Your responsability here...">
-                            </div>
+                    <div class="line">
+                        <div class="field">
+                            <label for="email">Your E-mail</label>
+                            <input id="email" type="email" required placeholder="your.domain@email.com">
                         </div>
-                        <div class="line">
-                            <div class="field">
-                                <label for="email">Your E-mail</label>
-                                <input id="email" type="email" required placeholder="your.domain@email.com">
-                            </div>
-                            <div class="field">
-                                <label for="whatsaap">Your Whatsapp</label>
-                                <input id="whatsapp" type="tel" required placeholder="+00 00 0000-0000">
-                            </div>
+                        <div class="field">
+                            <label for="whatsaap">Your Whatsapp</label>
+                            <input id="whatsapp" type="tel" required placeholder="+00 00 0000-0000">
                         </div>
-                        <!--
+                    </div>
+                    <!--
                         <label for="product-select">What kind of solution do you want to get?</label>
                         <br />
                         <div class="solutions">
@@ -580,12 +563,11 @@
                         </div>
                         -->
 
-                        <div class="content-submit">
-                            <button method="post" class="form-submit">continue</button>
-                            <!-- <button type="reset" class="form-clear">CLEAR DATA</button> -->
-                        </div>
-                    </form>
-                </div>
+                    <div class="content-submit">
+                        <button method="post" class="form-submit">continue</button>
+                        <button type="reset" class="form-clear">CLEAR DATA</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

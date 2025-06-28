@@ -30,7 +30,6 @@ h2 {
     color: #dadada;
     text-align: center;
     font-family: Poppins, sans-serif;
-    font-size: 28px;
     word-spacing: 4px;
 }
 
@@ -50,7 +49,7 @@ input,
 textarea {
     color: #dadada;
     font-family: Poppins, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 a :hover {
@@ -139,7 +138,21 @@ header li a {
 }
 
 .CTA:hover {
+    cursor: pointer;
+}
+
+.CTA-active {
+    color: #191919;
+    padding: 4px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
     background: linear-gradient(300deg, #f12711, #f5af19);
+}
+
+.CTA-active:hover {
+    cursor: pointer;
 }
 
 header #social-links {
@@ -338,7 +351,7 @@ article footer img {
 }
 
 #about-me {
-    padding: 72px 0;
+    padding: 72px 0 96px 0;
 }
 
 #about-me .container .title-section {
@@ -484,10 +497,20 @@ article footer img {
     right: 0%;
 }
 
-#contact-me .content {
+.content-form-disabled {
+    margin: 0 auto;
+    width: 770px;
     padding: 24px;
-    border: 1px solid #919191;
     border-radius: 16px;
+    border: 1px solid #919191;
+}
+
+.content-form-enabled {
+    margin: 0 auto;
+    width: 770px;
+    padding: 24px;
+    border-radius: 16px;
+    border: 3px solid #ff2a00;
 }
 
 #contact-me .title-section {
@@ -516,18 +539,23 @@ article footer img {
 
 #contact-me .title-section h2 {
     margin-bottom: 0;
+    font-size: 28px;
 }
 
 #contact-me h3 {
     text-align: left;
-    font-size: 18px;
-    margin: 24px 0;
+    font-size: 20px;
+    margin: 24px 0 32px 0;
     text-align: justify;
     word-spacing: 2px;
 }
 
-#content-slide-form {
+.closed-content-slide-form {
     display: none;
+}
+
+.open-content-slide-form {
+    display: block;
 }
 
 .line {
@@ -544,12 +572,12 @@ article footer img {
 
 input,
 textarea {
-    color: #f5f5f5;
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #000;
+    color: #000;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #dadada;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     resize: none;
 }
 
@@ -595,29 +623,33 @@ label {
     justify-content: left;
 }
 
-.form-submit,
-.form-clear {
-    padding: 8px 16px;
-    background-color: #919191;
-    color: #000;
+.form-submit {
+    padding: 12px 28px;
     font-size: 16px;
     font-weight: 600;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-}
-
-.form-submit:hover {
     color: #f5f5f5;
     font-weight: bolder;
+    margin-top: 16px;
     background: linear-gradient(300deg, #f12711, #f5af19);
 }
 
-.form-clear:hover {
+.form-clear {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
     color: #f5f5f5;
     font-weight: bolder;
-    background: linear-gradient(300deg, #191919, #dadada);
+    margin-top: 16px;
+    margin-left: 32px;
+    background: linear-gradient(300deg, #1c1b1b, #919191);
 }
 
 footer {
@@ -654,8 +686,8 @@ footer .container {
 }
 
 #coffee-icon {
-    height: 20px;
-    margin-top: 5px;
+    height: 22px;
+    margin-top: 4px;
     margin-left: 12px;
     position: absolute;
 }
