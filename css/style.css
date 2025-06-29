@@ -49,7 +49,7 @@ input,
 textarea {
     color: #dadada;
     font-family: Poppins, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 a :hover {
@@ -90,6 +90,14 @@ header .container {
     justify-content: space-between;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(300deg, #f5af19, #f12711);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 header nav {
     display: flex;
     align-items: center;
@@ -116,7 +124,7 @@ header .menu li:not(:last-child) {
 
 header li a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .menu-start-hover,
@@ -611,6 +619,8 @@ label {
     margin: 0 8px 16px 8px;
 }
 
+#name:autofill {}
+
 .price-zone {
     margin-top: 8px;
     padding-bottom: 16px;
@@ -680,7 +690,7 @@ footer .container {
 
 .content-title-social-links p {
     text-align: left;
-    font-size: 22px;
+    font-size: 20px;
     align-items: end;
     position: relative;
 }
@@ -702,8 +712,8 @@ footer .container {
     display: grid;
     width: 50%;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 34px;
-    justify-items: right;
+    gap: 32px 24px;
+    justify-items: center;
 }
 
 .content-social-links a {
@@ -715,7 +725,7 @@ footer .container {
 }
 
 .content-social-links a img {
-    height: 32px;
+    height: 28px;
 }
 
 .author {
